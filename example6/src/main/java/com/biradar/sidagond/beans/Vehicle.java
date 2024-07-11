@@ -15,10 +15,7 @@ public class Vehicle {
         this.name = name;
     }
 
-    public void printHello(){
-        System.out.println(
-            "Printing Hello from Component Vehicle Bean");
-    }
+   
 
     @Override
     public String toString(){
