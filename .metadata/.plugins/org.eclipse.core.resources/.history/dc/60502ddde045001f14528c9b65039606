@@ -1,0 +1,17 @@
+package com.eazybytes.eazyschool.model;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
+
+@Data
+@MappedSuperclass
+public class BaseEntity {
+	
+	private String createdBy;
+	private LocalDateTime createdAt;
+	private String updatedBy;
+	private LocalDateTime updatedAt;
+
+}
