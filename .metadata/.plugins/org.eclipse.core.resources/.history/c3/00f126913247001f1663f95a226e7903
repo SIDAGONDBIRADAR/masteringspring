@@ -1,0 +1,5 @@
+package com.eazybytes.eazyschool.annotations;
+
+public @interface PasswordValidator {
+
+}

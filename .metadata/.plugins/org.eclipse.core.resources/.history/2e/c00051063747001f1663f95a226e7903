@@ -1,0 +1,9 @@
+package com.eazybytes.eazyschool.validations;
+
+import com.eazybytes.eazyschool.annotations.FieldsValueMatch;
+
+import jakarta.validation.ConstraintValidator;
+
+public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValueMatch, Object>{
+
+}

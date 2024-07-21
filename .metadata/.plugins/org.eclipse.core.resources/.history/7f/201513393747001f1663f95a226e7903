@@ -1,0 +1,19 @@
+package com.eazybytes.eazyschool.validations;
+
+import com.eazybytes.eazyschool.annotations.FieldsValueMatch;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class FieldsValueMatchValidator implements ConstraintValidator<FieldsValueMatch, Object>{
+	
+	private String field;
+	private String fieldmatch;
+
+	@Override
+	public boolean isValid(Object value, ConstraintValidatorContext context) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

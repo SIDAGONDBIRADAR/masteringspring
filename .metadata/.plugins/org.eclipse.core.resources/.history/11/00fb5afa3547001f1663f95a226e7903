@@ -1,0 +1,19 @@
+package com.eazybytes.eazyschool.validations;
+
+import com.eazybytes.eazyschool.annotations.PasswordValidator;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class PasswordStrengthValidator implements ConstraintValidator<PasswordValidator, String>{
+	
+	
+
+	
+	@Override
+	public boolean isValid(String value, ConstraintValidatorContext context) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
