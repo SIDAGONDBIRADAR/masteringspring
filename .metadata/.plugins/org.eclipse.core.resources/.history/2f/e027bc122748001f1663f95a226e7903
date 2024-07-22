@@ -1,0 +1,37 @@
+package com.eazybytes.eazyschool.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.stereotype.Component;
+
+import com.eazybytes.eazyschool.model.Person;
+import com.eazybytes.eazyschool.repository.PersonRepository;
+
+@Component
+public class EazySchoolUsernamePwdAuthenticationProvider implements AuthenticationProvider {
+
+	@Autowired
+	PersonRepository personRepository;
+	
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+		String email = authentication.getName();
+		String password = authentication.getCredentials().toString();
+		Person dbPerson = personRepository.findByEmail(email);
+		
+		if(dbPerson != null && dbPerson.getPersonId() > 0 && dbPerson.getPwd().equals(password)) {
+			return new UsernamePasswordAuthenticationToken(email, password,getAuthorities(dbPerson.getRoles()));
+		}
+		
+		return null;
+	}
+
+	@Override
+	public boolean supports(Class<?> authentication) {
+		return authentication.equals(UsernamePasswordAuthenticationToken.class);
+	}
+
+}

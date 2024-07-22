@@ -1,21 +1,33 @@
 package com.eazybytes.eazyschool.controller;
 
 import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.eazybytes.eazyschool.model.Person;
+import com.eazybytes.eazyschool.repository.PersonRepository;
+
+import jakarta.servlet.http.HttpSession;
+
 @Slf4j
 @Controller
 public class DashboardController {
 
-    @RequestMapping("/dashboard")
-    public String displayDashboard(Model model,Authentication authentication) {
-        model.addAttribute("username", authentication.getName());
-        model.addAttribute("roles", authentication.getAuthorities().toString());
-        //throw new RuntimeException("It's been a bad day!!");
-        return "dashboard.html";
-    }
+	@Autowired
+	PersonRepository personRepository;
+
+	@RequestMapping("/dashboard")
+	public String displayDashboard(Model model, Authentication authentication, HttpSession session) {
+		Person dbPerson = personRepository.findByEmail(authentication.getName());
+		model.addAttribute("username", dbPerson.getName());
+		model.addAttribute("roles", authentication.getAuthorities().toString());
+		// throw new RuntimeException("It's been a bad day!!");
+		session.setAttribute("loggedInUser", dbPerson);
+		return "dashboard.html";
+	}
 
 }

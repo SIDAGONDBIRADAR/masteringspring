@@ -7,5 +7,7 @@ import com.eazybytes.eazyschool.model.Person;
 
 @Repository
 public interface PersonRepository extends JpaRepository<Person,Integer> {
+	
+	Person findByEmail(String email);
 
 }

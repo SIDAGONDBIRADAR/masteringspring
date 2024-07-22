@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.ApplicationScope;
 
-import com.eazybytes.eazyschool.EazySchoolConstants;
+import com.eazybytes.eazyschool.constants.EazySchoolConstants;
 import com.eazybytes.eazyschool.model.Contact;
 import com.eazybytes.eazyschool.repository.ContactRepository;
 

@@ -35,5 +35,5 @@ public class Address extends BaseEntity{
 	
 	@NotBlank(message = "ZipCode cannot be blank")
 	@Pattern(regexp = "(^$|[0-9]{6})",message = "Zipcode should be of 6 digits")
-	private Integer zipCode;
+	private String zipCode;
 }
