@@ -1,0 +1,110 @@
+package com.eazybytes.eazyschool.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.eazybytes.eazyschool.model.EazyClass;
+import com.eazybytes.eazyschool.model.Person;
+import com.eazybytes.eazyschool.repository.EazyClassRepository;
+import com.eazybytes.eazyschool.repository.PersonRepository;
+
+import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+@RequestMapping("/admin")
+public class AdminController {
+
+	@Autowired
+	EazyClassRepository eazyClassRepository;
+
+	@Autowired
+	PersonRepository personRepository;
+
+	@RequestMapping("/displayClasses")
+	public ModelAndView displayClasses(Model model) {
+		List<EazyClass> eazyClasses = eazyClassRepository.findAll();
+		ModelAndView modelAndView = new ModelAndView("classes.html");
+		modelAndView.addObject("eazyClasses", eazyClasses);
+		modelAndView.addObject("eazyClass", new EazyClass());
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/addNewClass", method = RequestMethod.POST)
+	public ModelAndView addClass(@Valid @ModelAttribute("eazyClass") EazyClass eazyClass) {
+		eazyClassRepository.save(eazyClass);
+		ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayClasses");
+		return modelAndView;
+	}
+
+	@RequestMapping("/deleteClass")
+	public ModelAndView deleteClass(Model model, @RequestParam("id") Integer id) {
+		EazyClass eazyClass = eazyClassRepository.findById(id).get();
+		for (Person person : eazyClass.getPersons()) {
+			person.setEazyClass(null);
+			personRepository.save(person);
+		}
+		eazyClassRepository.deleteById(id);
+		ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayClasses");
+		return modelAndView;
+	}
+
+	@RequestMapping("/displayStudents")
+	public ModelAndView displayStudents(Model model, @RequestParam int classId, HttpSession session,
+			@RequestParam(value="error",required = false) String error) {
+		String errorMessage = null;
+		ModelAndView modelAndView = new ModelAndView("students.html");
+		EazyClass eazyClass = eazyClassRepository.findById(classId).get();
+		modelAndView.addObject("eazyClass", eazyClass);
+		modelAndView.addObject("person", new Person());
+		session.setAttribute("eazyClass", eazyClass);
+		if (error != null) {
+			errorMessage = "Invalid Email Address";
+			modelAndView.addObject("errorMessage", errorMessage);
+		}
+		return modelAndView;
+	}
+
+	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+	public ModelAndView addStudent(Model model, HttpSession session, @ModelAttribute("person") Person person) {
+		ModelAndView modelAndView = new ModelAndView();
+		EazyClass eazyClass = (EazyClass) session.getAttribute("eazyClass");
+		Person dbPerson = personRepository.findByEmail(person.getEmail());
+		if (dbPerson == null || !(dbPerson.getPersonId() > 0)) {
+			modelAndView
+					.setViewName("redirect:/admin/displayStudents?classId=" + eazyClass.getClassId() + "&error=true");
+			return modelAndView;
+		}
+		dbPerson.setEazyClass(eazyClass);
+		personRepository.save(dbPerson);
+		eazyClass.getPersons().add(dbPerson);
+		eazyClassRepository.save(eazyClass);
+		modelAndView.setViewName("redirect:/admin/displayStudents?classId=" + eazyClass.getClassId());
+		return modelAndView;
+	}
+
+	@RequestMapping("/deleteStudent")
+	public ModelAndView deleteStudent(Model model, HttpSession session, @RequestParam("personId") Integer personId) {
+		EazyClass eazyClass = (EazyClass) session.getAttribute("eazyClass");
+		Person person = personRepository.findById(personId).get();
+		person.setEazyClass(null);
+		eazyClass.getPersons().remove(person);
+		EazyClass savedEazyClass = eazyClassRepository.save(eazyClass);
+		session.setAttribute("eazyClass", savedEazyClass);
+		ModelAndView modelAndView = new ModelAndView(
+				"redirect:/admin/displayStudents?classId=" + eazyClass.getClassId());
+		return modelAndView;
+	}
+
+}

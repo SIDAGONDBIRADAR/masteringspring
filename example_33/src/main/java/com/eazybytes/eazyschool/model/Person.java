@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Email;
@@ -19,8 +20,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @Entity
 @FieldsValueMatch.List({
 		@FieldsValueMatch(field = "pwd", fieldMatch = "confirmPwd", message = "Password do not match!"),
@@ -67,4 +71,8 @@ public class Person extends BaseEntity {
 	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST, targetEntity = Roles.class)
 	@JoinColumn(name = "role_id", referencedColumnName = "roleId", nullable = false)
 	private Roles roles;
+	
+	@ManyToOne(fetch = FetchType.LAZY,optional = true)
+	@JoinColumn(name="class_id",referencedColumnName = "classId",nullable = true)
+	private EazyClass eazyClass;
 }
