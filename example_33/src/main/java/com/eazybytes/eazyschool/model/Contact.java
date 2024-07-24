@@ -12,13 +12,17 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /*
 @Data annotation is provided by Lombok library which generates getter, setter,
 equals(), hashCode(), toString() methods & Constructor at compile time.
 This makes our code short and clean.
 * */
-@Data
+//@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "contact_msg")
 public class Contact extends BaseEntity{

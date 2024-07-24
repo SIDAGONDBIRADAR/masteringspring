@@ -1,0 +1,12 @@
+package com.eazybytes.eazyschool.model;
+
+import jakarta.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+public class Courses extends BaseEntity{
+
+}

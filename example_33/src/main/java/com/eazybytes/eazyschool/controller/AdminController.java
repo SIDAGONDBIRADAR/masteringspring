@@ -1,19 +1,21 @@
 package com.eazybytes.eazyschool.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.eazybytes.eazyschool.model.Courses;
 import com.eazybytes.eazyschool.model.EazyClass;
 import com.eazybytes.eazyschool.model.Person;
+import com.eazybytes.eazyschool.repository.CoursesRepository;
 import com.eazybytes.eazyschool.repository.EazyClassRepository;
 import com.eazybytes.eazyschool.repository.PersonRepository;
 
@@ -25,6 +27,11 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+
+	private static final String Courses = null;
+
+	@Autowired
+	CoursesRepository coursesRepository;
 
 	@Autowired
 	EazyClassRepository eazyClassRepository;
@@ -62,7 +69,7 @@ public class AdminController {
 
 	@RequestMapping("/displayStudents")
 	public ModelAndView displayStudents(Model model, @RequestParam int classId, HttpSession session,
-			@RequestParam(value="error",required = false) String error) {
+			@RequestParam(value = "error", required = false) String error) {
 		String errorMessage = null;
 		ModelAndView modelAndView = new ModelAndView("students.html");
 		EazyClass eazyClass = eazyClassRepository.findById(classId).get();
@@ -107,4 +114,67 @@ public class AdminController {
 		return modelAndView;
 	}
 
+	@RequestMapping("/displayCourses")
+	public ModelAndView displayCoursesPage(Model model) {
+		List<Courses> courses = coursesRepository.findAll();
+
+		ModelAndView modelAndView = new ModelAndView("courses_secured.html");
+		modelAndView.addObject("courses", courses);
+		modelAndView.addObject("course", new Courses());
+		return modelAndView;
+	}
+
+	@PostMapping("/addNewCourse")
+	public ModelAndView addCourse(@ModelAttribute("course") Courses courses, Model model) {
+		ModelAndView modelAndView = new ModelAndView();
+		coursesRepository.save(courses);
+		modelAndView.setViewName("redirect:/admin/displayCourses");
+		return modelAndView;
+	}
+
+	@RequestMapping("/viewStudents")
+	public ModelAndView viewStudents(Model model, @RequestParam int id, HttpSession session,
+			@RequestParam(value = "error", required = false) String error) {
+		String errorMessage = null;
+		ModelAndView modelAndView = new ModelAndView("courses_student.html");
+		Courses courses = coursesRepository.findById(id).get();
+		modelAndView.addObject("courses", courses);
+		modelAndView.addObject("person", new Person());
+		session.setAttribute("courses", courses);
+		if (error != null) {
+			errorMessage = "Invalid Email Address";
+			modelAndView.addObject("errorMessage", errorMessage);
+		}
+		return modelAndView;
+	}
+
+	@RequestMapping("/addStudentToCourse")
+	public ModelAndView addStudentToCourse(Model model, HttpSession session, @ModelAttribute("person") Person person) {
+		
+		ModelAndView modelAndView = new ModelAndView();
+		Courses courses = (Courses) session.getAttribute("courses");
+		Person personEntity = personRepository.findByEmail(person.getEmail());
+		if (personEntity == null || !(personEntity.getPersonId() > 0)) {
+			modelAndView.setViewName("redirect:/admin/viewStudents?id=" + courses.getCourseId() + "&error=true");
+		}
+		personEntity.getCourses().add(courses);
+		courses.getPersons().add(personEntity);
+		personRepository.save(personEntity);
+		session.setAttribute("courses", courses);
+		modelAndView.setViewName("redirect:/admin/viewStudents?id=" + courses.getCourseId());
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping("/deleteStudentFromCourse")
+	public ModelAndView deleteStudent(@RequestParam int personId,Model model,HttpSession session) {
+		Courses courses=(Courses) session.getAttribute("courses");
+		Person person = personRepository.findById(personId).get();
+		person.getCourses().remove(courses);
+		courses.getPersons().remove(person);
+		personRepository.save(person);
+		session.setAttribute("courses",courses);
+		ModelAndView modelAndView = new ModelAndView("redirect:/admin/viewStudents?id="+courses.getCourseId());
+		return modelAndView;
+	}
 }

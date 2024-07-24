@@ -12,8 +12,12 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+//@Data
+@Getter
+@Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
