@@ -3237,3 +3237,97 @@ Caused by: java.lang.Exception: File not found: C:\Users\sidagond\eclipse-worksp
 2024-07-24 21:57:15,721 [Worker-493: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_32\src\test\resources
 2024-07-24 21:57:17,343 [Worker-494: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-07-24 21:57:17,388 [Worker-494: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-24 21:57:17,584 [Worker-494: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 09:49:57,410 [Worker-518: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-25 09:49:57,411 [Worker-518: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 09:49:57,418 [Worker-518: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 09:52:58,464 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 09:52:58,750 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 09:52:58,773 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 09:54:01,945 [Worker-519: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 09:54:02,205 [Worker-519: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 09:54:02,228 [Worker-519: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 09:57:18,468 [Worker-522: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-25 09:57:18,469 [Worker-522: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 09:57:18,485 [Worker-522: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:05:15,338 [Worker-524: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-25 10:05:15,341 [Worker-524: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:05:15,347 [Worker-524: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:08:47,534 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:08:47,834 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 10:08:47,865 [Worker-517: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:10:58,882 [Worker-530: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-25 10:10:58,883 [Worker-530: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:10:58,889 [Worker-530: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:13:42,517 [Worker-525: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:13:42,699 [Worker-525: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 10:13:42,728 [Worker-525: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:13:51,479 [Worker-533: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:13:51,674 [Worker-533: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 10:13:51,694 [Worker-533: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 10:24:26,076 [Worker-539: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 10:24:26,114 [Worker-539: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 10:24:26,139 [Worker-539: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 17:15:02,930 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 17:15:03,109 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 17:15:03,130 [Worker-555: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 17:27:44,038 [Worker-554: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 17:27:44,132 [Worker-554: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 17:27:44,167 [Worker-554: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 18:07:24,025 [Worker-567: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 18:07:24,185 [Worker-567: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 18:07:24,325 [Worker-567: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 18:11:20,379 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 18:11:20,408 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 18:11:20,435 [Worker-570: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 19:52:21,753 [Worker-577: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 19:52:21,779 [Worker-577: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 19:52:22,051 [Worker-577: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 19:52:29,541 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 19:52:29,751 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 19:52:29,776 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 19:54:48,181 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 19:54:48,246 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 19:54:48,291 [Worker-576: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 19:56:11,359 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 19:56:11,467 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 19:56:11,488 [Worker-578: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 20:07:15,497 [Worker-581: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 20:07:15,621 [Worker-581: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 20:07:15,652 [Worker-581: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 20:13:19,851 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 20:13:19,909 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 20:13:19,934 [Worker-586: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:04:02,326 [Worker-595: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:04:02,526 [Worker-595: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:04:02,549 [Worker-595: Launching example_33 - EazyschoolApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:14:28,262 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:14:28,318 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:14:28,353 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:15:49,819 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:15:49,899 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:15:49,933 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:19:03,958 [Worker-605: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:19:03,990 [Worker-605: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:19:04,014 [Worker-605: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:21:21,135 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:21:21,152 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:21:21,180 [Worker-609: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:34:29,295 [Worker-619: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:34:29,370 [Worker-619: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:34:29,388 [Worker-619: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:44:07,977 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:44:08,004 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:44:08,028 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:48:43,763 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:48:43,818 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:48:43,844 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:48:53,063 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:48:53,186 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:48:53,204 [Worker-620: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:49:21,078 [Worker-627: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:49:21,101 [Worker-627: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:49:21,124 [Worker-627: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources
+2024-07-25 23:50:22,040 [Worker-626: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-25 23:50:22,065 [Worker-626: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 69 resources from src\main\resources to target\classes
+2024-07-25 23:50:22,093 [Worker-626: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\sidagond\eclipse-workspace\beginnertoexpertspringfw\example_33\src\test\resources

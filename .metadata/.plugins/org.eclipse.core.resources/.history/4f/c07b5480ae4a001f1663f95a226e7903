@@ -1,0 +1,61 @@
+package com.eazybytes.eazyschool.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.eazybytes.eazyschool.dto.Response;
+import com.eazybytes.eazyschool.model.Contact;
+import com.eazybytes.eazyschool.repository.ContactRepository;
+
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@Controller
+@RequestMapping(path = "/api/contact")
+public class ContactRestController {
+
+	@Autowired
+	ContactRepository contactRepository;
+
+	@GetMapping("/getMessagesByStatus")
+	@ResponseBody
+	public List<Contact> getMessagesByStatus(@RequestParam("status") String status) {
+		return contactRepository.findByStatus(status);
+
+	}
+
+	@GetMapping("/getAllMessagesByStatus")
+	@ResponseBody
+	public List<Contact> getAllMessagesByStatus(@RequestBody Contact contact) {
+		if (contact != null && contact.getContactId() > 0) {
+			return contactRepository.findByStatus(contact.getStatus());
+		} else {
+			return new ArrayList<>();
+		}
+
+	}
+
+	@PostMapping("/saveMsg")
+	public ResponseEntity<Response> saveMsg(@RequestBody @Valid Contact contact,@RequestHeader("invocationFrom") String invocationFrom) {
+		Contact savedContact = contactRepository.save(contact);
+		Response response = new Response();
+		response.setStatusCode("200");
+		response.setStatusMsg("Message saved successfully");
+		
+		return ResponseEntity.status(HttpStatus.CREATED).header(null, null)
+	}
+}
