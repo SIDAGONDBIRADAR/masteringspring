@@ -2,4 +2,6 @@
 <typeInfoHistroy>
     <typeInfo handle="=example-1/src&lt;com.biradar.sidagond{Speakers.java[Speakers" modifiers="513" timestamp="1719856751243"/>
     <typeInfo handle="=example-1/src&lt;com.biradar.sidagond{Tyres.java[Tyres" modifiers="513" timestamp="1719856728624"/>
+    <typeInfo handle="=example_33/C:\/Users\/sidagond\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/6.1.2\/spring-security-core-6.1.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-core=/=/maven.version=/6.1.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.security.authentication(AuthenticationProvider.class[AuthenticationProvider" modifiers="1537" timestamp="1692099624923"/>
+    <typeInfo handle="=example_33/C:\/Users\/sidagond\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.1.2\/spring-data-jpa-3.1.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.1.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1691677470771"/>
 </typeInfoHistroy>

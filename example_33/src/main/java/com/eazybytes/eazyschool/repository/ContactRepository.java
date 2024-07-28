@@ -16,11 +16,13 @@ import jakarta.transaction.Transactional;
 @Repository
 public interface ContactRepository extends JpaRepository<Contact, Integer> {
 	
+	Contact findByContactId(Integer contactId);
+	
 	List<Contact> findByStatus(String status);
 	
 //	@Query("select c from Contact c where status= :status")
 	@Query(value = "select * from contact_msg c where c.status=:status",nativeQuery = true)
-	Page<Contact> findByStatus(String status,Pageable pageable);
+	Page<Contact> findByStatusByQuery(String status,Pageable pageable);
 	
 	@Modifying
 	@Transactional

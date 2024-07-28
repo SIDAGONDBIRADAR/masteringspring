@@ -1,5 +1,0 @@
-package com.eazybytes.eazyschool.audit;
-
-public class AuditAwareImpl {
-
-}

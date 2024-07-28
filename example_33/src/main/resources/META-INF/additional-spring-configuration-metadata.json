@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "eazyschool.pageSize",
+    "type": "java.lang.String",
+    "description": "A description for 'eazyschool.pageSize'"
+  },
+  {
+    "name": "eazyschool.contact.successMsg",
+    "type": "java.lang.String",
+    "description": "A description for 'eazyschool.contact.successMsg'"
+  },
+  {
+    "name": "eazyschool.pageSize",
+    "type": "java.lang.String",
+    "description": "A description for 'eazyschool.pageSize'"
+  }
+]}
